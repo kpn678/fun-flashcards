@@ -23,4 +23,12 @@ describe('Turn', () => {
     expect(turn.guess).to.equal('object');
     expect(turn.card).to.deep.equal(card);
   });
+
+  it('should return the guess', () => {
+    expect(turn.returnGuess()).to.equal('object');
+  });
+
+  it('should return the card', () => {
+    expect(turn.returnCard()).to.deep.equal(card);
+  });
 });
