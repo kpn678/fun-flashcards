@@ -17,5 +17,10 @@ describe('Turn', () => {
 
   it('should be an instance of Turn', () => {
     expect(turn).to.be.an.instanceof(Turn);
-  })
+  });
+
+  it('should have arguments for a string guess and Card object', () => {
+    expect(turn.guess).to.equal('object');
+    expect(turn.card).to.deep.equal(card);
+  });
 });
