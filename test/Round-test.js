@@ -32,4 +32,16 @@ describe('Round', () => {
   it('should have the first card in the deck be the current card at the start of the round', () => {
     expect(round.currentCard).to.equal(deck.cards[0]);
   })
+
+  it('should return the current card being played', () => {
+    round.returnCurrentCard();
+
+    expect(round.returnCurrentCard()).to.equal(round.currentCard);
+  })
+
+  it('should update the current card being played', () => {
+    round.updateCurrentCard();
+
+    expect(round.returnCurrentCard()).to.equal(round.currentCard);
+  })
 });
