@@ -31,17 +31,19 @@ describe('Round', () => {
 
   it('should have the first card in the deck be the current card at the start of the round', () => {
     expect(round.currentCard).to.equal(deck.cards[0]);
-  })
+  });
 
   it('should return the current card being played', () => {
-    round.returnCurrentCard();
-
     expect(round.returnCurrentCard()).to.equal(round.currentCard);
-  })
+  });
 
-  it('should update the current card being played', () => {
-    round.updateCurrentCard();
+  it('should begin with 0 turns', () => {
+    expect(round.turns).to.equal(0);
+  });
 
-    expect(round.returnCurrentCard()).to.equal(round.currentCard);
-  })
+  it('should begin with 0 incorrect guesses', () => {
+    expect(round.incorrectGuesses).to.deep.equal([]);
+  });
+
+
 });
