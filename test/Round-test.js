@@ -3,7 +3,6 @@ const expect = chai.expect;
 const Round = require('../src/Round');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
-const Turn = require('../src/Turn');
 
 describe('Round', () => {
   let card1,
@@ -45,5 +44,8 @@ describe('Round', () => {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-
+  it('should increase turns by 1 each time a guess is taken', () => {
+    round.takeTurn('pug');
+    expect(round.turns).to.equal(1);
+  });
 });
