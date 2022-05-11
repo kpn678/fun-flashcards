@@ -44,8 +44,29 @@ describe('Round', () => {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-  it('should increase turns by 1 each time a guess is taken', () => {
+  it('should increase turns by 1 each time a guess is taken whether it is correct or incorrect', () => {
     round.takeTurn('pug');
     expect(round.turns).to.equal(1);
+    round.takeTurn('gallbladder');
+    expect(round.turns).to.equal(2);
+  });
+
+  it('should have next card become current card after a turn is taken', () => {
+    round.takeTurn('pug');
+    expect(round.currentCard).to.equal(deck.cards[1]);
+    round.takeTurn('gallbladder');
+    expect(round.currentCard).to.equal(deck.cards[2]);
+  });
+
+  it('should store incorrect guesses by id into incorrectGuesses', () => {
+    round.takeTurn('pug');
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+    round.takeTurn('gallbladder');
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+  });
+
+  it('should return feedback based on if guess is correct or incorrect', () => {
+    expect(round.takeTurn('pug')).to.equal('incorrect!');
+    expect(round.takeTurn('gallbladder')).to.equal('correct!');
   });
 });
