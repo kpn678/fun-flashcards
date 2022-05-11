@@ -69,4 +69,10 @@ describe('Round', () => {
     expect(round.takeTurn('pug')).to.equal('incorrect!');
     expect(round.takeTurn('gallbladder')).to.equal('correct!');
   });
+
+  it('should calculate and return percentage of correct guesses', () => {
+    round.takeTurn('pug');
+    round.takeTurn('gallbladder');
+    expect(round.calculatePercentCorrect()).to.equal(50);
+  });
 });
