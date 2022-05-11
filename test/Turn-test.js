@@ -34,7 +34,7 @@ describe('Turn', () => {
 
   it('should return boolean depending on if user guess matches correct answer on card', () => {
     turn.evaluateGuess();
-    expect(turn.evaluateGuess()).to.equal(turn.match);
+    expect(turn.evaluateGuess()).to.equal(false);
   });
 
   it('should return incorrect or correct depending on if user guess matches correct answer on card', () => {
