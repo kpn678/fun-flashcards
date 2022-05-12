@@ -15,7 +15,7 @@
 #### Goals
 - To make a working game in the terminal using JS code that is DRY and follows SRP
 - To begin utilizing TDD by writing a comprehensive test suite via Mocha/Chai
-- To complete iterations 1-3 along with the project board and timer extensions in iteration 4 without bugs or missing components
+- To complete iterations 1-3 along with the [project board](https://github.com/kpn678/fun-flashcards/projects/1) and timer extensions in iteration 4 without bugs or missing components
 
 #### Project Specs
 The rubric and specs can be found [here](https://frontend.turing.edu/projects/flash-cards.html).
