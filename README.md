@@ -6,6 +6,7 @@
 #### Goals
 - To make a working game in the terminal using JS code that is DRY and follows SRP
 - To begin utilizing TDD by writing a comprehensive test suite via Mocha/Chai
+- To complete iterations 1-3 along with the project board and timer extensions in iteration 4 without bugs or missing components
 
 #### Project Specs
 The rubric and specs can be found [here](https://frontend.turing.edu/projects/flash-cards.html).
@@ -31,3 +32,11 @@ All Class properties and methods files along with their corresponding test files
 ## Technologies Implemented
 - JavaScript
 - Mocha/Chai
+
+## Reflection
+- While writing our own tests to test our code felt strange at first, even tedious at times, it eventually became a great check to ensure that we really understood the code we were writing and why we wrote it like that
+- There were some parts that went easier than expected, but of course, there were sections like the `takeTurn()` method in `Round.js` that were quite difficult to figure out
+- Other extensions I would have enjoyed looking into more were the more practice and build another flashcards dataset
+
+## Contributor
+- [Kristy Nguyen](https://github.com/kpn678)
