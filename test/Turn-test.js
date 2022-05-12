@@ -52,12 +52,12 @@ describe('Turn', () => {
     expect(turn2.evaluateGuess()).to.equal(true);
   });
 
-  it('should return incorrect! if turn.evaluateGuess() evaluates to false', () => {
+  it('should return incorrect if evalute guess returns false', () => {
     turn1.giveFeedback();
     expect(turn1.giveFeedback()).to.equal('incorrect!');
   });
 
-  it('should return correct! if turn.evaluateGuess() evaluates to true', () => {
+  it('should return correct if evalute guess returns true', () => {
     turn2.giveFeedback();
     expect(turn2.giveFeedback()).to.equal('correct!');
   });
