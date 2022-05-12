@@ -1,8 +1,9 @@
 const chai = require('chai');
 const expect = chai.expect;
-const Round = require('../src/Round');
+
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
+const Round = require('../src/Round');
 
 describe('Round', () => {
   let card1,
@@ -14,14 +15,16 @@ describe('Round', () => {
     card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
-
     deck = new Deck([card1, card2, card3]);
-
     round = new Round(deck);
   });
 
   it('should be a function', () => {
     expect(Round).to.be.a('function');
+  });
+
+  it('should be an instance of Round', function() {
+    expect(round).to.be.an.instanceof(Round);
   });
 
   it('should start off with a deck', () => {
@@ -44,7 +47,7 @@ describe('Round', () => {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-  it('should increase turns by 1 each time a guess is taken whether it is correct or incorrect', () => {
+  it('should increment turns each time a guess is taken whether it is correct or incorrect', () => {
     round.takeTurn('pug');
     expect(round.turns).to.equal(1);
     round.takeTurn('gallbladder');
@@ -65,8 +68,12 @@ describe('Round', () => {
     expect(round.incorrectGuesses).to.deep.equal([1]);
   });
 
-  it('should return feedback based on if guess is correct or incorrect', () => {
+  it('should return feedback if guess is incorrect', () => {
     expect(round.takeTurn('pug')).to.equal('incorrect!');
+  });
+
+  it('should return feedback if guess is correct', () => {
+    round.takeTurn('pug');
     expect(round.takeTurn('gallbladder')).to.equal('correct!');
   });
 
