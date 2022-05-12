@@ -21,7 +21,7 @@
 The rubric and specs can be found [here](https://frontend.turing.edu/projects/flash-cards.html).
 
 ## Set Up
-1. Fork this [repository](https://github.com/kpn678/tic-tac-toe.git).
+1. Fork this [repository](https://github.com/kpn678/fun-flashcards.git).
 2. Clone the repository into your local machine and navigate into it.
 3. Run `npm test` in your terminal to use testing suite to test code.
 4. Run `node index.js` in your terminal to play the game.
@@ -40,7 +40,7 @@ Information shown at the end of the game (not demonstrated in the video due to v
 - *util.js* - code to make the game run properly in the console
 - *index.js* - where we start the game
 
-All Class properties and methods files along with their corresponding test files are listed below:
+All Class files including relevant properties and methods along with their corresponding test files are listed below:
 - *Card.js* & *Card-test.js*
 - *Turn.js* & *Turn-test.js*
 - *Deck.js* & *Deck-test.js*
@@ -52,7 +52,7 @@ All Class properties and methods files along with their corresponding test files
 - Mocha/Chai
 
 ## Reflection
-- While writing our own tests to test our code felt strange at first, even tedious at times, it eventually became a great check to ensure that we really understood the code we were writing and why we wrote it like that
+- While writing my own tests to test my code felt strange at first, even tedious at times, it eventually became a great check to ensure that I really understood the code I was writing and why I wrote it like that
 - There were some parts that went easier than expected, but of course, there were sections like the `takeTurn()` method in `Round.js` that were quite difficult to figure out
 - Other extensions I would have enjoyed looking into more were the "more practice" and "build another flashcards dataset" ones
 
