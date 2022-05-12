@@ -18,6 +18,7 @@ class Game {
     this.currentRound = round;
     this.printMessage(deck, round);
     this.printQuestion(round);
+    console.time('** Total Time Spent on Round **');
   };
   printMessage(deck, round) {
     console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
